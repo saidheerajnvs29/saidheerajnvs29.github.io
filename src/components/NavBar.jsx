@@ -19,6 +19,7 @@ export default function NavBar() {
             <NavLink
               key={l.to}
               to={l.to}
+              end={l.to === '/'}
               className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
             >
               {l.label}
