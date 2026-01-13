@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -13,7 +13,10 @@ export default function NavBar() {
   return (
     <header className="nav">
       <div className="nav-inner container">
-        <div className="brand">Dheeraj</div>
+        <div>
+          <Link to="/" className="brand">Dheeraj</Link>
+          <div className="muted" style={{fontSize:12, marginTop:4}}>Software Engineer</div>
+        </div>
         <nav>
           {links.map((l) => (
             <NavLink
