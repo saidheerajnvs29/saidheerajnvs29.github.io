@@ -14,7 +14,7 @@ export default function NavBar() {
     <header className="nav">
       <div className="nav-inner container">
         <div>
-          <Link to="/" className="brand">Dheeraj</Link>
+          <Link to="/" className="brand">Venkata Sai Dheeraj N</Link>
           <div className="muted" style={{fontSize:12, marginTop:4}}>Software Engineer</div>
         </div>
         <nav>
