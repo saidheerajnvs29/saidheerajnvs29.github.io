@@ -8,14 +8,14 @@ export default function Experience() {
 
       <div className="timeline">
         <div className="timeline-item">
-          <h3>Software Engineer — Company ABC</h3>
-          <p className="muted">Dates • Location</p>
+          <h3>Senior Software Engineer — Bristol Myers Squibb</h3>
+          <p className="muted">10/2024 - Current • Tampa, FL</p>
           <p>Short summary of responsibilities and achievements.</p>
         </div>
 
         <div className="timeline-item">
-          <h3>Another Role — Company XYZ</h3>
-          <p className="muted">Dates • Location</p>
+          <h3>Cloud Developer — Bristol Myers Squibb</h3>
+          <p className="muted">07/2023 - 09/2024 • Tampa, FL</p>
           <p>Short summary of responsibilities and achievements.</p>
         </div>
       </div>
