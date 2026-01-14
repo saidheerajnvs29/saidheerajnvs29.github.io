@@ -8,7 +8,7 @@ export default function Contact() {
 
       <ul>
         <li>Email: <a href="mailto:saidheerajnvs1998@gmail.com">saidheerajnvs1998@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/dheeraj-narayanabhatla/">Dheeraj Narayanabhatla</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/dheeraj-narayanabhatla/">Venkata Sai Dheeraj Narayanabhatla</a></li>
       </ul>
     </section>
   )

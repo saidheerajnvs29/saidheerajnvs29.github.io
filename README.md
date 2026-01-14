@@ -28,6 +28,11 @@ Files added
 - `src/pages/*` — Home, About, Experience, Achievements, Contact (placeholders)
 - `src/index.css` — small, opinionated styles
 
+Profile image
+
+- Place your profile picture in the `public/` folder as `profile.jpg` (or `profile.png`). The app will use `/profile.jpg` if present. A placeholder `public/profile.svg` is included by default.
+
+
 Next steps
 
 - Fill your content in `src/pages/*` and update links in `NavBar.jsx`.

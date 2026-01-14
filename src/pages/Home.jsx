@@ -3,6 +3,7 @@ import React from 'react'
 export default function Home() {
   return (
     <section>
+      <img src="/profile.svg" alt="Dheeraj" className="profile" />
       <h1>Hi, I'm Dheeraj.</h1>
       <p className="lead">Software engineer — backend, distributed systems, and cloud.</p>
 
