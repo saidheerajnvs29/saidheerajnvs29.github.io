@@ -2,7 +2,7 @@
 
 This is a minimal React + Vite scaffold for a personal portfolio. Content is left as placeholders for you to fill in.
 
-How to run
+How to run.
 
 ```bash
 # install dependencies
