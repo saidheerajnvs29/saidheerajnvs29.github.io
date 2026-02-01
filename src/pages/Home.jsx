@@ -2,30 +2,45 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <section>
-      <img src="/dheeraj.JPG" alt="Dheeraj" className="profile" />
-      <h1>Hi, I'm Dheeraj.</h1>
-      <p className="lead">Software engineer — backend, distributed systems, and cloud.</p>
+    <section className="section">
+      <div className="container">
+        <div className="hero">
+          <div className="hero-left">
+            <h1>Hi, I'm Dheeraj</h1>
+            <p className="lead">Software engineer with experience in backend systems, distributed architectures, and cloud-native platforms.</p>
 
-      <h2>Key Skills</h2>
-      <p>Java · Python · Kafka · PostgreSQL · AWS · System Design</p>
+            <div style={{marginTop:18}}>
+              <h3>Key Skills</h3>
+              <div className="card">
+                <p>
+                  <strong>Languages:</strong> C, C++, Core Java, Python, SQL<br/>
+                  <strong>Frameworks:</strong> FastAPI, Spring Cloud, Spring Boot, Spring Batch, Apache Camel, Flask, Mockito, Elasticsearch, Nginx<br/>
+                  <strong>Tools:</strong> Docker, Kubernetes, Maven, Git, Terraform, Helm, RabbitMQ, ActiveMQ<br/>
+                  <strong>Cloud:</strong> AWS Lambda, Step Functions, API Gateway, SQS/SNS, EC2, S3, DynamoDB, EKS, RDS, CloudWatch, ECR
+                </p>
+              </div>
+            </div>
+          </div>
 
-      <h2>Projects</h2>
-      <div className="card-grid">
-        <article className="card">
-          <h3>Distributed Task Scheduler</h3>
-          <p>Event-driven scheduler built with Kafka and Redis.</p>
-          <a href="#">GitHub →</a>
-        </article>
-
-        <article className="card">
-          <h3>Event-Driven Order System</h3>
-          <p>Microservices-based order processing with Kafka and PostgreSQL.</p>
-          <a href="#">GitHub →</a>
-        </article>
+          <aside className="hero-right">
+            <img src="/dheeraj.JPG" alt="Dheeraj" className="profile" onError={(e)=>{e.currentTarget.src='/profile.svg'}} />
+            <div className="card">
+              <h3 style={{marginTop:0}}>Contact</h3>
+              <p className="muted">Email: <a href="mailto:saidheerajnvs1998@gmail.com">saidheerajnvs1998@gmail.com</a></p>
+              <p className="muted">LinkedIn: <a href="https://www.linkedin.com/in/dheeraj-narayanabhatla/">Dheeraj Narayanabhatla</a></p>
+            </div>
+            <div style={{height:16}} />
+            <div className="card">
+              <h4 style={{marginTop:0}}>Selected Projects</h4>
+              <ul className="muted">
+                <li><strong>OneDataShare</strong> — Spring Batch based large-file transfer research project.</li>
+                <li><strong>Multi-topic IR Chatbot</strong> — Flask + SOLR + Sentence-BERT semantic search.</li>
+                <li><strong>Maternal Health App</strong> — Full stack messaging system using WebSockets.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
       </div>
-
-      <p className="muted">Replace this content with your own projects and links.</p>
     </section>
   )
 }

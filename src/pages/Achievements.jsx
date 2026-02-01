@@ -2,17 +2,27 @@ import React from 'react'
 
 export default function Achievements() {
   return (
-    <section>
-      <h1>Achievements</h1>
-      <p className="lead">List awards, certifications, notable accomplishments here.</p>
+    <section className="section">
+      <div className="container">
+        <h1>Achievements & Certifications</h1>
+        <p className="lead">Selected awards, certifications and recognitions.</p>
 
-      <ul>
-        <li><b>AppSec Guardian White Belt</b> for advancing secure development practices within Research at BMS - 2025</li>
-        <li><b>AWS Certified Solutions Architect Associate</b> - 2023</li>
-        <li><b>Distinguished Technical Achievement</b> for innovating auto-scaling with zero downtime on legacy systems - 2020</li>
-      </ul>
+        <div className="card-grid" style={{marginTop:18}}>
+          <article className="card">
+            <h4>Certifications</h4>
+            <p className="muted">AWS Certified Solutions Architect - Associate (Issued June 2023, valid through June 2026)</p>
+          </article>
 
-      <p className="muted">Add links or badges if you like.</p>
+          <article className="card">
+            <h4>Awards</h4>
+            <ul className="muted">
+              <li>AppSec Guardians White Belt — 2025 (BMS Research IT)</li>
+              <li>Star of the Cadence — Q2 2020 (NCR Corporation)</li>
+              <li>Distinguished Technical Achievement — SW R&amp;D Excellence Awards 2020 (NCR Corporation)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
   )
 }
