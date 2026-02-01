@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -24,7 +24,9 @@ export default function NavBar() {
     <header className="nav">
       <div className="nav-inner container">
         <div>
-          <Link to="/" className="brand">Venkata Sai Dheeraj N</Link>
+          <div className="brand" aria-hidden="false">
+            <span className="accent-name">Venkata Sai Dheeraj N</span>
+          </div>
           <div className="muted" style={{fontSize:12, marginTop:4}}>Software Engineer</div>
         </div>
         <nav style={{display:'flex',alignItems:'center',gap:8}}>
