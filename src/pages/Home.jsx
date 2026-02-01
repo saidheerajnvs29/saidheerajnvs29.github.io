@@ -25,24 +25,20 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            <div style={{marginTop:16}}>
+              <h4>Selected Projects</h4>
+              <div className="card">
+                <ul className="muted">
+                  <li><strong>OneDataShare</strong> — Spring Batch based large-file transfer research project.</li>
+                  <li><strong>Multi-topic IR Chatbot</strong> — Flask + SOLR + Sentence-BERT semantic search.</li>
+                  <li><strong>Maternal Health App</strong> — Full stack messaging system using WebSockets.</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <aside className="hero-right">
             <img src="/dheeraj.JPG" alt="Dheeraj" className="profile" onError={(e)=>{e.currentTarget.src='/profile.svg'}} />
-            <div className="card">
-              <h3 style={{marginTop:0}}>Contact</h3>
-              <p className="muted">Email: <a href="mailto:saidheerajnvs1998@gmail.com">saidheerajnvs1998@gmail.com</a></p>
-              <p className="muted">LinkedIn: <a href="https://www.linkedin.com/in/dheeraj-narayanabhatla/">Dheeraj Narayanabhatla</a></p>
-            </div>
-            <div style={{height:16}} />
-            <div className="card">
-              <h4 style={{marginTop:0}}>Selected Projects</h4>
-              <ul className="muted">
-                <li><strong>OneDataShare</strong> — Spring Batch based large-file transfer research project.</li>
-                <li><strong>Multi-topic IR Chatbot</strong> — Flask + SOLR + Sentence-BERT semantic search.</li>
-                <li><strong>Maternal Health App</strong> — Full stack messaging system using WebSockets.</li>
-              </ul>
-            </div>
           </aside>
         </div>
       </div>

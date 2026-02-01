@@ -24,10 +24,9 @@ export default function Contact() {
             <div className="card">
               <h3 style={{marginTop:0}}>Get in touch</h3>
               <p className="muted">Email: <a href="mailto:saidheerajnvs1998@gmail.com">saidheerajnvs1998@gmail.com</a></p>
-              <p className="muted">LinkedIn: <a href="https://www.linkedin.com/in/dheeraj-narayanabhatla/">Profile</a></p>
 
               <div style={{marginTop:12,display:'flex',gap:8,alignItems:'center'}}>
-                <a href="https://github.com/your-username" target="_blank" rel="noreferrer" className="btn btn-ghost" style={{display:'inline-flex',alignItems:'center',gap:8}}><IconGitHub /> GitHub</a>
+                <a href="https://github.com/saidheerajnvs29" target="_blank" rel="noreferrer" className="btn btn-ghost" style={{display:'inline-flex',alignItems:'center',gap:8}}><IconGitHub /> GitHub</a>
                 <a href="https://linkedin.com/in/dheeraj-narayanabhatla/" target="_blank" rel="noreferrer" className="btn btn-ghost" style={{display:'inline-flex',alignItems:'center',gap:8}}><IconLinkedIn /> LinkedIn</a>
               </div>
             </div>
