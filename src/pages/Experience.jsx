@@ -5,7 +5,6 @@ export default function Experience() {
     <section className="section">
       <div className="container">
       <h1>Experience</h1>
-      <p className="lead">List your work experience, roles, and responsibilities.</p>
 
       <div className="timeline">
           <div className="timeline-item">
