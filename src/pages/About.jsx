@@ -10,30 +10,36 @@ export default function About() {
         <div style={{display:'grid',gridTemplateColumns:'1fr 320px',gap:20,marginTop:20}}>
           <div>
             <h2>Education</h2>
-            <div className="card-grid">
+            <div style={{display:'flex',flexDirection:'column',gap:12,marginTop:12}}>
               <div className="card">
-                <h4>Master of Science in Computer Science</h4>
-                <p className="muted">State University of New York at Buffalo, Buffalo, NY, USA — Jan 2022 - May 2023</p>
+                <div className="edu-meta">
+                  <h4 style={{margin:0}}>Master of Science in Computer Science</h4>
+                  <div className="dates muted">Jan 2022 - May 2023</div>
+                </div>
+                <p className="muted">State University of New York at Buffalo, Buffalo, NY, USA</p>
                 <p>GPA: 4/4</p>
               </div>
 
               <div className="card">
-                <h4>Bachelor of Science in Computer Science and Engineering</h4>
-                <p className="muted">Chaitanya Bharathi Institute of Technology, Hyderabad, India — Aug 2015 - May 2019</p>
+                <div className="edu-meta">
+                  <h4 style={{margin:0}}>Bachelor of Science in Computer Science and Engineering</h4>
+                  <div className="dates muted">Aug 2015 - May 2019</div>
+                </div>
+                <p className="muted">Chaitanya Bharathi Institute of Technology, Hyderabad, India</p>
                 <p>GPA: 8.76/10</p>
               </div>
             </div>
 
             <h2 style={{marginTop:18}}>Interests</h2>
             <p className="muted">Distributed systems, cloud migrations, event-driven architectures, and developer productivity/automation.</p>
-          </div>
 
-          <aside>
-            <div className="card">
-              <h3 style={{marginTop:0}}>Quick facts</h3>
-              <p className="muted">Open to remote work • Based in (add location) • Languages: English</p>
+            <div style={{marginTop:12}}>
+              <div className="card">
+                <h4 style={{marginTop:0}}>Quick facts</h4>
+                <p className="muted">Based in Tampa, FL • Open to relocation across US • Languages: English, Hindi</p>
+              </div>
             </div>
-          </aside>
+          </div>
         </div>
       </div>
     </section>

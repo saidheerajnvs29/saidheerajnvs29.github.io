@@ -6,8 +6,13 @@ export default function Home() {
       <div className="container">
         <div className="hero">
           <div className="hero-left">
-            <h1>Hi, I'm Dheeraj</h1>
+            <h1>Hi, I'm <span className="accent-name">Dheeraj</span></h1>
             <p className="lead">Software engineer with experience in backend systems, distributed architectures, and cloud-native platforms.</p>
+
+            <div className="cta-row">
+              <a className="btn btn-primary" href="mailto:saidheerajnvs1998@gmail.com">Email</a>
+              <a className="btn btn-ghost" href="/resume.pdf">Resume</a>
+            </div>
 
             <div style={{marginTop:18}}>
               <h3>Key Skills</h3>

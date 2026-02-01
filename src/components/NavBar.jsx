@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 
 const links = [
@@ -10,6 +10,16 @@ const links = [
 ]
 
 export default function NavBar() {
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
+
+  useEffect(() => {
+    if (theme === 'dark') document.body.setAttribute('data-theme', 'dark')
+    else document.body.removeAttribute('data-theme')
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))
+
   return (
     <header className="nav">
       <div className="nav-inner container">
@@ -17,7 +27,7 @@ export default function NavBar() {
           <Link to="/" className="brand">Venkata Sai Dheeraj N</Link>
           <div className="muted" style={{fontSize:12, marginTop:4}}>Software Engineer</div>
         </div>
-        <nav>
+        <nav style={{display:'flex',alignItems:'center',gap:8}}>
           {links.map((l) => (
             <NavLink
               key={l.to}
@@ -28,6 +38,9 @@ export default function NavBar() {
               {l.label}
             </NavLink>
           ))}
+          <button aria-label="Toggle theme" className="theme-toggle" onClick={toggleTheme}>
+            {theme === 'dark' ? '☀️' : '🌙'}
+          </button>
         </nav>
       </div>
     </header>
