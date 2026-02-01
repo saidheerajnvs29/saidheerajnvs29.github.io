@@ -6,11 +6,18 @@
   --muted: #6b7280;
   --accent: #2563eb;
   --accent-2: #7c3aed;
+  --ai-accent: #22c55e; /* green for AI/ML */
+  --aws-accent: #ff9900; /* AWS orange */
+  --python-accent: #306998; /* Python blue */
   --glass: rgba(255,255,255,0.6);
   --text: #0f172a;
   --card-shadow: 0 10px 30px rgba(2,6,23,0.06);
   --date-bg: #f1f5ff;
   --date-text: var(--muted);
+  /* card surface and border for clearer separation */
+  --card-surface: linear-gradient(180deg,#ffffff,#f7fbff);
+  --card-surface-hover: linear-gradient(180deg,#ffffff,#f4f9ff);
+  --card-border: rgba(2,6,23,0.04);
 }
 *{box-sizing:border-box}
 :root{
@@ -33,6 +40,9 @@ body[data-theme="dark"]{
   --muted: #93a2b3; /* soft muted gray-blue */
   --accent: #58a0f0; /* friendly blue accent */
   --accent-2: #7b5cf6; /* purple secondary */
+  --ai-accent: #34d86a;
+  --aws-accent: #ffb86b;
+  --python-accent: #5b8fe6;
   --glass: rgba(255,255,255,0.03);
   --text: #dbeefc; /* readable off-white */
   --card-shadow: 0 10px 26px rgba(2,6,23,0.55);
@@ -40,6 +50,10 @@ body[data-theme="dark"]{
   --date-bg: rgba(255,255,255,0.04);
   --date-text: #d6e9ff;
   --card-border: rgba(255,255,255,0.02);
+  /* subtle card surface in dark mode to gently lift cards */
+  /* make card surfaces opaque in dark mode so background decorations don't show through */
+  --card-surface: #07202a; /* solid, slightly lighter than page background */
+  --card-surface-hover: #0a2b3a; /* hover lift color */
 }
 
 /* dark mode tweaks for interactive elements */
@@ -83,8 +97,9 @@ nav a{margin-left:16px;color:var(--muted);text-decoration:none}
 
 /* Cards */
 .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:20px}
-.card{background:var(--surface);padding:18px;border-radius:12px;box-shadow:var(--card-shadow);transition:transform .18s ease}
-.card:hover{transform:translateY(-6px)}
+.card{background:var(--card-surface);padding:18px;border-radius:12px;box-shadow:var(--card-shadow);transition:transform .18s ease, border-color .18s ease, background .18s ease}
+.card{border:1px solid var(--card-border)}
+.card:hover{transform:translateY(-6px);background:var(--card-surface-hover);box-shadow:0 18px 40px rgba(2,6,23,0.08)}
 
 /* Education meta row: title left, dates right */
 .edu-meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -116,6 +131,44 @@ h2{margin-top:22px}
 
 a{color:var(--accent)}
 
+/* Background decorative icons */
+.bg-icons{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.bg-icon{position:absolute;opacity:0.95;will-change:transform,opacity;transform-origin:center}
+.bg-icon svg{stroke-width:2}
+.bg-icon svg{display:block;filter:blur(0.2px)}
+.bg-icon:nth-child(1){animation:float 12s ease-in-out infinite;}
+.bg-icon:nth-child(2){animation:float 18s ease-in-out infinite;}
+.bg-icon:nth-child(3){animation:float 14s ease-in-out infinite;}
+.bg-icon:nth-child(1){animation:float 8s ease-in-out infinite; animation-delay:-2s}
+.bg-icon:nth-child(2){animation:float 12s ease-in-out infinite; animation-delay:-4s}
+.bg-icon:nth-child(3){animation:float 10s ease-in-out infinite; animation-delay:-1s}
+.bg-icon:nth-child(4){animation:float 14s ease-in-out infinite; animation-delay:-3s}
+.bg-icon:nth-child(5){animation:float 9s ease-in-out infinite; animation-delay:-2.5s}
+.bg-icon:nth-child(6){animation:float 11s ease-in-out infinite; animation-delay:-1.2s}
+.bg-icon:nth-child(7){animation:float 13s ease-in-out infinite; animation-delay:-3.6s}
+.bg-icon:nth-child(8){animation:float 9.5s ease-in-out infinite; animation-delay:-2.2s}
+
+@keyframes float{
+  0%{transform:translate(0,0) scale(1) rotate(0)}
+  20%{transform:translate(12px,-12px) scale(1.03) rotate(3deg)}
+  40%{transform:translate(-10px,10px) scale(1.05) rotate(-3deg)}
+  60%{transform:translate(8px,-8px) scale(1.02) rotate(2deg)}
+  80%{transform:translate(-6px,6px) scale(1.01) rotate(-2deg)}
+  100%{transform:translate(0,0) scale(1) rotate(0)}
+}
+ 
+
+/* ensure background icons sit behind app content */
+.app-root{position:relative;z-index:1}
+.bg-icons{z-index:-1}
+
+/* ensure cards sit above background icons and have their own stacking context */
+.card{position:relative;z-index:2}
+
+/* adapt icon color for dark/light via currentColor */
+body[data-theme="dark"] .bg-icon{color:rgba(96,165,250,0.12)}
+body:not([data-theme="dark"]) .bg-icon{color:rgba(37,99,235,0.12)}
+
 /* Footer */
 .site-footer{margin-top:48px;padding:28px 0;color:var(--muted);border-top:1px solid rgba(15,23,42,0.04)}
 .footer-inner{display:flex;justify-content:space-between;align-items:center}
@@ -131,7 +184,8 @@ a{color:var(--accent)}
 
 /* dark-mode specific timeline styling */
 body[data-theme="dark"] .timeline-item{
-  background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+  /* use the opaque card surface so background icons don't show through timeline cards */
+  background: var(--card-surface);
   border-left-color: rgba(96,165,250,0.16);
   box-shadow:0 12px 30px rgba(2,6,23,0.6);
 }
@@ -151,6 +205,10 @@ body[data-theme="dark"] .timeline-item{
 @media (max-width:420px){
   .profile{width:96px;height:96px}
   h1{font-size:1.4rem}
+}
+
+@media (max-width:720px){
+  .bg-icons{display:none}
 }
 
 

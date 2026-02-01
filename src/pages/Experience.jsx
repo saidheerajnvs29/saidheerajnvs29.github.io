@@ -14,7 +14,7 @@ export default function Experience() {
             <ul>
               <li>Designed and implemented a RAG-based agentic AI solution for inventory search and management using LangGraph and Bedrock integrations for LIMS/ELN.</li>
               <li>Implemented integrations with legacy chemical registration using AWS Lambda and Step Functions to validate structures and generate harmonized tariff codes.</li>
-              <li>Built a migration tool to export legacy experiments and attachments — helped migrate 25k+ experiments and 100k+ files to a unified platform.</li>
+              <li>Built a migration tool to export legacy experiments and attachments, thus helping migrate 30k+ experiments and 200k+ files to a unified platform.</li>
               <li>Implemented health monitoring and anomaly detector AI agent using Strands and Bedrock to track healthchecks and CloudWatch logs.</li>
             </ul>
           </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
+import BackgroundIcons from './components/BackgroundIcons'
 import Home from './pages/Home'
 import About from './pages/About'
 import Experience from './pages/Experience'
@@ -11,6 +12,7 @@ import Footer from './components/Footer'
 export default function App() {
   return (
     <div className="app-root">
+      <BackgroundIcons />
       <NavBar />
       <main className="container">
         <Routes>

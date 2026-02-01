@@ -26,7 +26,7 @@ export default function Home() {
               </div>
             </div>
             <div style={{marginTop:16}}>
-              <h4>Selected Projects</h4>
+              <h4>Projects</h4>
               <div className="card">
                 <ul className="muted">
                   <li><strong>OneDataShare</strong> — Spring Batch based large-file transfer research project.</li>

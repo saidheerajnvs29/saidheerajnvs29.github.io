@@ -31,11 +31,16 @@ export default function About() {
             </div>
 
             <h2 style={{marginTop:18}}>Interests</h2>
-            <p className="muted">Distributed systems, cloud migrations, event-driven architectures, and developer productivity/automation.</p>
-
             <div style={{marginTop:12}}>
               <div className="card">
-                <h4 style={{marginTop:0}}>Quick facts</h4>
+                <p className="muted">Agentic systems, RAG, Distributed systems, cloud migrations, event-driven architectures, and developer productivity/automation.</p>
+              </div>
+            </div>
+
+            <h2 style={{marginTop:18}}>Quick facts</h2>
+            <div style={{marginTop:12}}>
+              <div className="card">
+                
                 <p className="muted">Based in Tampa, FL • Open to relocation across US • Languages: English, Hindi</p>
               </div>
             </div>

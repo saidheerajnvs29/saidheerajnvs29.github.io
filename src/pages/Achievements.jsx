@@ -5,7 +5,6 @@ export default function Achievements() {
     <section className="section">
       <div className="container">
         <h1>Achievements & Certifications</h1>
-        <p className="lead">Selected awards, certifications and recognitions.</p>
 
         <div className="card-grid" style={{marginTop:18}}>
           <article className="card">
