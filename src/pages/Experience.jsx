@@ -9,7 +9,8 @@ export default function Experience() {
 
       <div className="timeline">
           <div className="timeline-item">
-            <h3>Senior Software Engineer — Bristol Myers Squibb</h3>
+            <h3>Senior Software Engineer</h3>
+            <div className="company muted">Bristol Myers Squibb</div>
             <div className="date">Sept 2024 – Current</div>
             <ul>
               <li>Designed and implemented a RAG-based agentic AI solution for inventory search and management using LangGraph and Bedrock integrations for LIMS/ELN.</li>
@@ -20,7 +21,8 @@ export default function Experience() {
           </div>
 
           <div className="timeline-item">
-            <h3>Cloud Developer — Bristol Myers Squibb</h3>
+            <h3>Cloud Developer</h3>
+            <div className="company muted">Bristol Myers Squibb</div>
             <div className="date">Jul 2023 – Aug 2024</div>
             <ul>
               <li>Upgraded legacy systems from Java 8 to Java 17 and removed outdated libraries for sustainability.</li>
@@ -30,7 +32,8 @@ export default function Experience() {
           </div>
 
           <div className="timeline-item">
-            <h3>Software Engineer – II / I / Intern — NCR Corporation, Hyderabad, India</h3>
+            <h3>Software Engineer – II / I / Intern</h3>
+            <div className="company muted">NCR Corporation, Hyderabad, India</div>
             <div className="date">May 2019 – Dec 2021</div>
             <ul>
               <li>Improved payment application performance and availability; reduced latency to below 50ms by improving pod replicas and graceful shutdown.</li>
